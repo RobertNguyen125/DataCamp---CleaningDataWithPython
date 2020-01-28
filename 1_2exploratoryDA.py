@@ -7,7 +7,10 @@
 
 import pandas as pd
 df = pd.read_csv('/Users/apple/desktop/cleaningDataPython/dob_job_application_filings_subset.csv');
+df_sub = pd.read_csv('/Users/apple/desktop/cleaningDataPython/df_subset.csv')
+# print(df_sub.head())
+# print(df.head())
 
-print(df['Borough'].value_counts(dropna=False));
-print(df['State'].value_counts(dropna=False));
-print(df['Site Fill'].value_counts(dropna=False));
+# print(df_sub['Borough'].value_counts(dropna=False));
+# print(df['State'].value_counts(dropna=False));
+# print(df['Site Fill'].value_counts(dropna=False));

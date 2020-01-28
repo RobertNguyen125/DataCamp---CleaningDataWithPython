@@ -6,6 +6,7 @@
 # data format better for reporting vs analysing
 # problems we are trying to fix: columns contain values instead of variables use pd.melt
 
+# melt() turns columns into rows
 # pd.melt(frame=df, id_vars='name', value_vars=['treatment a', 'treatment b'])
 # id_vars: columns of data not to melt
 # value_vars: columns to melt, if now value_vars, all columns not set in id_vars will be melt
@@ -20,3 +21,4 @@ print(airquality_melt.head()) # NOTE: inspect the melt version pf airquality_mel
 
 # add meaningful names for melt()
 airquality_melt = pd.melt(airquality, id_vars='Date', var_name='measurement', value_name='reading')
+print(airquality_melt)

@@ -1,4 +1,4 @@
-# the opposite process of melting to reshape data from analysis-friendly to reporting-friendly
+# pivoting is the opposite process of melting to reshape data from analysis-friendly to reporting-friendly
 # pivot_tidy = weather.pitovt(index = 'date', columns = 'element', values ='value')
 # index: columns not to pivot
 # columns: columns to pivot to new column
@@ -14,12 +14,12 @@ print(airquality_melt.head())
 airquality_pivot=airquality_melt.pivot_table(index=['Month', 'Day'], columns = 'measurement', values = 'reading')
 print(airquality_pivot)
 
-# the airquality_pivot df is not as the original. the df has hierarchical index 
+# the airquality_pivot df is not as the original. the df has hierarchical index
 # use reset_index() method to fix this issue
 
 print(airquality_pivot.index) #to check airquality_pivot index
 airquality_pivot_reset = airquality_pivot.reset_index()
-print(airquality_pivot_reset.index) # to check airquality_pivot_reset after manipulation
+print(airquality_pivot_reset.index) # to check airquality_pivot_reset after reseting
 
 # pivoting duplicate values
 # airquality_dup was preloaded in Datacamp

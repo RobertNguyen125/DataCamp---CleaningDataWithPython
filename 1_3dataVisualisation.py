@@ -17,19 +17,20 @@ import matplotlib.pyplot as plt
 
 # create histogram
 df = pd.read_csv('/Users/apple/desktop/cleaningDataPython/dob_job_application_filings_subset.csv')
-df_subset = pd.read_csv('/Users/apple/desktop/cleaningDataPython/df_subset.csv')
-print(df['Existing Zoning Sqft'].describe())
-df['Existing Zoning Sqft'].plot(kind='hist', rot=70, logx=True, logy=True)
-# plt.savefig('/Users/apple/desktop/cleaningDataPython/1_3histogram.png')
+df_sub = pd.read_csv('/Users/apple/desktop/cleaningDataPython/df_subset.csv')
+# print(df['Existing Zoning Sqft'].describe())
+# print(df_sub['Existing Zoning Sqft'].describe())
+# df_sub['Existing Zoning Sqft'].plot(kind='hist', rot=70, logx=True, logy=True)
+# # plt.savefig('/Users/apple/desktop/cleaningDataPython/1_3histogram.png')
 # plt.show()
-
-
-# create boxplot
-df.boxplot(column='Initial Cost',by='Borough')
+#
+#
+# # create boxplot
+df_sub.boxplot(column='Initial Cost',by='Borough')
 plt.show()
-
-#create scatter plot
-df.plot(kind='scatter', x='Initial Cost',y='Total Est. Fee',rot=70)
-plt.show()
-df_subset.plot(kind='scatter', x='Initial Cost',y='Total Est. Fee',rot=70)
-# NOTE: result from 2nd plot shows there is a positive correlation between Initial Cost and Total Est. Fee
+#
+# #create scatter plot
+# df.plot(kind='scatter', x='Initial Cost',y='Total Est. Fee',rot=70)
+# plt.show()
+# df_subset.plot(kind='scatter', x='Initial Cost',y='Total Est. Fee',rot=70)
+# # NOTE: result from 2nd plot shows there is a positive correlation between Initial Cost and Total Est. Fee
